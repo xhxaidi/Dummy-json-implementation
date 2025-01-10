@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <h1>name</h1>
+        <img class="pp" src="" alt="" />
+      </div>
+
+      <br /><br /><br />
+      <p class="name">Full Name:</p>
+      <p class="height">Height:</p>
+      <p class="age">Age:</p>
+      <p class="birthDate">Birth Date:</p>
+      <div class="gender">Gender:</div>
+      <p class="eyeColor">Eye Color:</p>
+      <p class="bloodGroup">Blood Group:</p>
+      <p class="id">ID:</p>
+      <p class="phone">Ph:</p>
+      <p class="role">Role:</p>
+      <p class="company"></p>
+      <p class="Univesity">:</p>
+      <p class="usr">User Name:</p>
+      <p class="weight">weight:</p>
+      <p class="crypto">Coin: ,Wallet: , Network</p>
+      <p class="address">Address: ,City: ,State: ,PostalCode:</p>
+      <p class="email">Email:</p>
+      <p class="password">Password:</p>
+      <p class="ip">IP:</p>
+      <p class="ssn">SSN:</p>
+      <p class="ein">ein:</p>
+      <p class="macAdd">:</p>
+    </div>
+    <script>
+      const heading = document.querySelector("h1");
+      const name = document.querySelector(".name");
+      const height = document.querySelector(".height");
+      const age = document.querySelector(".age");
+      const birthDate = document.querySelector(".birthDate");
+      const gender = document.querySelector(".gender");
+      const eyeColor = document.querySelector(".eyeColor");
+      const bloodGroup = document.querySelector(".bloodGroup");
+      const id = document.querySelector(".id");
+      const phone = document.querySelector(".phone");
+      const role = document.querySelector(".role");
+      const company = document.querySelector(".company");
+      const Univesity = document.querySelector(".Univesity");
+      const usr = document.querySelector(".usr");
+      const weight = document.querySelector(".weight");
+      const crypto = document.querySelector(".crypto");
+      const address = document.querySelector(".address");
+      const email = document.querySelector(".email");
+      const password = document.querySelector(".password");
+      const ip = document.querySelector(".ip");
+      const ssn = document.querySelector(".ssn");
+      const ein = document.querySelector(".ein");
+      const macAdd = document.querySelector(".macAdd");
+      const img = document.querySelector(".pp");
+
+      /*this is to extract user id from the url*/
+      const queryParams = new URLSearchParams(window.location.search);
+      const userId = queryParams.get("userId");
+      console.log(userId); //here the user id is string
+      const uid = Number(userId); //converting the string to number
+      console.log(uid);
+      const URL = `https://dummyjson.com/users/${userId}`;
+      async function getUsers() {
+        console.log("getting data ......");
+        const res = await fetch(URL);
+        console.log();
+        const data = await res.json();
+        console.log(data);
+        console.log(data.firstName);
+        heading.innerText = data.firstName;
+        name.innerText = `Full Name: ${data.firstName} ${data.lastName}`;
+        height.innerText = `Height: ${data.height}`;
+        age.innerText = `Age: ${data.age}`;
+        birthDate.innerText = `Birth Date: ${data.birthDate}`;
+        gender.innerText = `Gender: ${data.gender}`;
+        eyeColor.innerText = `Eye Color: ${data.eyeColor}`;
+        bloodGroup.innerText = `Blood Group: ${data.bloodGroup}`;
+        id.innerText = `ID: ${data.id}`;
+        phone.innerText = `Ph: ${data.phone}`;
+        role.innerText = `Role: ${data.role}`;
+        company.innerText = `Company --> DEPARTMENT : ${data.company.department}, NAME : ${data.company.name}, TITLE : ${data.company.title}`;
+        Univesity.innerText = `Univesity: ${data.university}`;
+        usr.innerText = `User Name: ${data.username}`;
+        weight.innerText = `Weight: ${data.weight}`;
+        crypto.innerText = `COIN: ${data.crypto.coin}, WALLET: ${data.crypto.wallet}, NETWORK: ${data.crypto.network}`;
+        address.innerText = `ADDRESS: ${data.address.address}, CITY: ${data.address.city}, STATE: ${data.address.state}, POSTAL CODE: ${data.address.postalCode}`;
+        email.innerText = `Email: ${data.email}`;
+        password.innerText = `Password: ${data.password}`;
+        ip.innerText = `IP: ${data.ip}`;
+        ssn.innerText = `SSN: ${data.ssn}`;
+        ein.innerText = `EIN: ${data.ein}`;
+        macAdd.innerText = `MAC ADDRESS: ${data.macAddress}`;
+        //profile picture
+        img.src = data.image;
+      }
+      getUsers();
+    </script>
+  </body>
+</html>

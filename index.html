@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pure CSS Table Highlight (vertical & horizontal)</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="h1f">
+        The data retrieved from Dummy JSON using the Fetch API.
+      </h1>
+
+      <button class="addusr" style="cursor: pointer">
+        Click here to add user
+      </button>
+      <table>
+        <thead>
+          <tr>
+            <th class="idh">ID</th>
+            <th class="fNh">First Name</th>
+            <th class="lNh">Last Name</th>
+            <th class="ageh">Age</th>
+            <th class="infoh"><u>INFO</u></th>
+            <th class="delh"><u>Delete</u></th>
+            <th class="uph"><u>Update</u></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- this is the update section a floting -->
+    <div class="editsection">
+      <div class="editbox">
+        <div class="eboxh">
+          <h1 class="ehname"></h1>
+          <button class="X">x</button>
+        </div>
+        <label class="elable">ID:</label>
+        <input class="eboxin eid" type="text" /><br /><br />
+        <label class="elable">First name:</label>
+        <input class="eboxin efname" type="text" /><br /><br />
+        <label class="elable">Last name:</label>
+        <input class="eboxin elname" type="text" /><br /><br />
+        <label class="elable">Age:</label>
+        <input class="eboxin eage" type="text" /><br /><br />
+
+        <button class="ebtn">Submit</button>
+      </div>
+    </div>
+    <script src="script .js"></script>
+  </body>
+</html>

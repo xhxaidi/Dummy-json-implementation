@@ -1,0 +1,70 @@
+* {
+  border: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  padding: 5px;
+}
+.datain {
+  border: solid 1px black;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.form {
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-box-shadow: 10px 10px 278px 86px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 10px 10px 278px 86px rgba(255, 255, 255, 1);
+  box-shadow: 10px 10px 278px 86px rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  padding: 20px;
+  font-size: 40px;
+}
+.fillingarea {
+  border: solid 1px black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+label input {
+  font-size: larger;
+}
+
+.addUsrBtn {
+  width: 90%;
+  margin: 10px;
+  font-size: larger;
+  border-radius: 20px;
+  background-color: rgb(37, 160, 37);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  height: 50px;
+}
+.addUsrBtn:hover {
+  background-color: greenyellow;
+  cursor: pointer;
+  color: black;
+}

@@ -1,0 +1,208 @@
+* {
+  border: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+  display: flex;
+}
+.container {
+  position: relative;
+  background-color: re;
+  margin: 10vh auto;
+  width: 80%;
+}
+.h1f {
+  padding-bottom: 20px;
+  font-size: 50px;
+  color: white;
+}
+/* heading class */
+.idh,
+.fNh,
+.lNh,
+.ageh,
+.delh,
+.infoh {
+  /* background-color: black;
+  color: white; */
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.uph {
+  border-bottom: 2px solid white;
+}
+th {
+  font-size: 25px;
+}
+/* table body class */
+td {
+  padding: 10px;
+  text-align: center;
+}
+table {
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 5px;
+  width: 100%;
+}
+.kmore:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.id:hover,
+.fN:hover,
+.lN:hover,
+.age:hover {
+  background-color: rgb(31, 30, 30);
+}
+table {
+  position: absolute;
+}
+/* this is the section for the know more thi */
+.bg {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 1500px;
+  width: 100vw;
+  position: absolute;
+  background-color: red;
+}
+.kmoreSec {
+  height: 600px;
+  width: 1500px;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 20px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  height: 100px;
+  width: 100%;
+}
+.usdId {
+  font-size: 30px;
+  color: white;
+  height: 100px;
+}
+.usdName {
+  font-size: 100px;
+  color: white;
+  height: 100px;
+}
+
+.bottom {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+}
+.genInfo {
+  font-size: larger;
+  margin: 10px;
+  height: auto;
+  width: auto;
+}
+.fa-trash {
+  color: red;
+  font-size: 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.update:hover,
+.delete:hover {
+  background-color: rgb(31, 30, 30);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fa-regular {
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* the updation box */
+.editsection {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.editbox {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  -webkit-box-shadow: 10px 10px 278px 86px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 10px 10px 278px 86px rgba(255, 255, 255, 1);
+  box-shadow: 10px 10px 278px 86px rgba(255, 255, 255, 1);
+}
+.eboxin {
+  border: 1px solid black;
+  padding-left: 10px;
+  font-size: larger;
+}
+.eboxh {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.ebtn {
+  height: 50px;
+  font-size: larger;
+  background-color: greenyellow;
+  border-radius: 10px;
+}
+.ebtn:hover {
+  background-color: rgb(37, 160, 37);
+  cursor: pointer;
+}
+.elable {
+  font-size: larger;
+}
+.X {
+  font-size: 40px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  cursor: pointer;
+}
+/* the btn to add usr */
+.addusr {
+  font-size: 20px;
+  background-color: antiquewhite;
+
+  border-radius: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 5px solid rgb(225, 168, 117);
+}

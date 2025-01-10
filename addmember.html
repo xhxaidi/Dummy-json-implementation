@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1>Add New Member in API</h1>
+        <div class="fillingarea">
+          <form action="/action_page.php" method="get">
+            <label class="elementlable">First name: </label>
+            <input type="text" class="datain" id="fname" /><br /><br />
+            <label class="elementlable">Last name: </label>
+            <input type="text" class="datain" id="lname" /><br /><br />
+            <label class="elementlable">Height:</label>
+            <input type="text" class="datain" id="height" /><br /><br />
+            <label class="elementlable">Age:</label>
+            <input type="text" class="datain" id="age" /><br /><br />
+            <label class="elementlable">Birth Date:</label>
+            <input type="text" class="datain" id="birthDate" /><br /><br />
+            <label class="elementlable">Gender:</label>
+            <input type="text" class="datain" id="gender" /><br /><br />
+            <label class="elementlable">Blood Group:</label>
+            <input type="text" class="datain" id="bloodGroup" /><br /><br />
+            <label class="elementlable">ID:</label>
+            <input type="text" class="datain" id="id" /><br /><br />
+          </div>
+            <!-- tsdkjasdkfjnasdfkjas -->
+            <button class="addUsrBtn">ADD USER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const heading = document.querySelector("h1");
+      const fname = document.querySelector("#fname");
+      const lname = document.querySelector("#lname");
+      const height = document.querySelector("#height");
+      const age = document.querySelector("#age");
+      const birthDate = document.querySelector("#birthDate");
+      const gender = document.querySelector("#gender");
+      const bloodGroup = document.querySelector("#bloodGroup");
+      const id = document.querySelector("#id");
+      const addUsrBtn = document.querySelector(".addUsrBtn")
+
+      const URL = `https://dummyjson.com/users/add`;
+      /*** Make a method to post a new user into the server ***/
+      
+      async function postNewUser(e) {
+        e.preventDefault();
+        const response = await fetch(URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: fname.value,
+            lastName: lname.value,
+            height: height.value,
+            age: age.value,
+            birthDate: birthDate.value,
+            gender: gender.value,
+            bloodGroup: bloodGroup.value,
+            id: id.value,
+          }),
+        });
+        const data = await response.json();
+        console.log("User Added Successfully:", data);
+        alert("User added successfully!");
+      
+      }
+      addUsrBtn.addEventListener("click", postNewUser);
+    </script>
+  </body>
+</html>
